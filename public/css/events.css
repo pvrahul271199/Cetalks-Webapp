@@ -1,0 +1,360 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Preloader */
+.loader_bg {
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+}
+
+.loader {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+
+.loader::before {
+    content: '';
+    border: 1em solid #e4cd3d;
+    border-radius: 100%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
+
+.loader::after {
+    content: '';
+    border: 1em solid #FF4A31;
+    border-radius: 90%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
+
+.loader:before {
+    animation-delay: 0.5s;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* Jumbotron */
+.jumbotron {
+    position: relative;
+    top: 81px;
+    background: url("../../images/jumbo/evntbg.jpg") 100% 100%;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.jumbotron h1 {
+    font-size: 5.1rem;
+    font-weight: 600;
+    font-family: "Nunito", sans-serif;
+}
+
+@media only screen and (max-width:768px) {
+    .jumbotron h1 {
+        font-size: 3.1rem;
+
+    }
+}
+
+/* text between lines */
+
+#eventmainpage h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#eventmainpage h2:before,
+#eventmainpage h2:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #000;
+    margin: auto;
+}
+
+#eventmainpage h2:before {
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+#eventmainpage h2:after {
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+#eventmainpage h2 {
+    margin: 60px auto 0px auto;
+    text-align: center;
+    font-size: 3.3rem;
+    font-weight: 300;
+}
+
+/* Card */
+.card.card_width {
+    width: 18rem;
+}
+
+@media screen and (max-width:768px) {
+    .card.card_width {
+        width: 15rem;
+    }
+}
+
+.card-body {
+    margin: 15px 0px 0px 0px;
+}
+
+.eventscard p {
+    color: black;
+    margin-top: 9px;
+}
+
+.eventscard .eachrow {
+    margin: 72px 60px 100px 60px;
+}
+
+#secrow {
+    margin: 72px 60px 180px 60px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    /* For desktop: */
+    .eventscard {
+        margin-bottom: 90px;
+    }
+
+    .eventscard .eachrow {
+        margin: 72px 10px 180px 10px;
+    }
+
+    .eventscard #secrow {
+        margin: 60px 10px 0px 10px;
+    }
+
+    #team p {
+        margin-top: 51px;
+        margin-bottom: 10px;
+    }
+
+    #eventmainpage h2 {
+        font-size: 1.8rem;
+        margin: 30px auto 45px auto;
+    }
+
+    #eventmainpage h2:before {
+        margin-right: 6px;
+        margin-left: 20px;
+    }
+
+    #eventmainpage h2:after {
+        margin-right: 20px;
+        margin-left: 6px;
+    }
+
+    .card .card-body h5 {
+        font-size: 1rem;
+    }
+
+    .eventscard p {
+        color: black;
+        margin-top: 12px;
+    }
+}
+
+/* Below is for the changing image */
+
+.eventscard .mySlides {
+    display: none;
+}
+
+.mySlidestwo {
+    display: none;
+}
+
+.myslidesthree {
+    display: none;
+}
+
+.mySlides img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
+
+/* Number text (1/3 etc) */
+
+/* The dots/bullets/indicators */
+.dot {
+    display: none;
+    margin: 0 2px;
+    transition: background-color 0.6s ease;
+}
+
+
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    animation-name: fade;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.8;
+    }
+
+
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        margin-bottom: 36px;
+    }
+
+    .card .card-body .card-title {
+
+        font-size: 0.8rem;
+
+    }
+
+    .card .card-body .card-text {
+
+        font-size: 0.6rem;
+
+    }
+
+}
+
+/* card */
+.card {
+    margin: 0px 10px 12px 10px;
+    border-radius: 9px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: -3px -3px 6px #ffffff, 3px 3px 6px #00000070;
+}
+
+.card .card-body {
+    position: relative;
+}
+
+.card .card-body .spotif {
+    position: absolute;
+    top: -29%;
+    left: 78%;
+
+}
+
+.card .card-body .card-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 660;
+    font-family: calibri;
+    margin-bottom: 3px;
+}
+
+.card .card-body .card-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+    font-weight: 260;
+    font-family: Verdana;
+}
+
+.card .card-body .card-button {
+    text-align: center;
+}
+
+.card .card-body p .text-muted {
+    float: right;
+}
+
+.card .card-body .btn {
+    margin: 0 auto;
+}
+
+.card .card-body .spotif {
+    font-size: 1.6rem;
+    text-align: center;
+    background: #1DD05D;
+    color: #000;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+}
+
+@media only screen and (max-width:768px) {
+    .card .card-body .spotif {
+        font-size: 1.2rem;
+        top: -21%;
+    }
+}
