@@ -34,7 +34,6 @@ try { //Pre Loader
     // //  To close overlay when Clicked Outside
     document.addEventListener("click", function (e) {
         let boolean_nav = overlay_menu[0].classList.contains('show');
-        console.log(boolean_nav);
         console.log(e.target.className === "overlay show")
         if (boolean_nav) {
             if (e.target.className !== "overlay show" && e.target.className !== "demoJS") {
